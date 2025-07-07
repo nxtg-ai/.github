@@ -1,58 +1,77 @@
-# 🧠 NXTG.AI — Building the Future of Human-AI Collaboration
+# <img src="logo.png" alt="NXTG.AI Logo" width="20"> NxtG.ai
 
-Welcome to **NXTG.AI**, where we craft tools that don't just solve problems—they inspire greatness. Our mission is to empower creators, developers, and enterprises with modular, intelligent systems that amplify human potential.
-
-> 🚀 "We don’t just build AI. We build the next generation of you."
-
----
-
-## 🌟 Our Vision
-
-At NXTG.AI, we believe in a future where AI and humans collaborate seamlessly. We're dedicated to developing:
-
-- **Modular AI Agents**: Building blocks that can be combined to create complex, intelligent workflows.
-- **Visual Development Platforms**: Tools that allow users to design and deploy AI solutions without deep technical expertise.
-- **Open Source Innovation**: Sharing our work to foster a community of collaboration and continuous improvement.
+**Welcome to the future of human-AI synergy.**  
+At **NxtG.ai**, we build boundary-breaking tech that transforms how humans and machines think, act, and evolve — together.
 
 ---
 
-## 🔧 Projects
+## 🧠 Featured Projects
 
-### [SynApps v0.4.0](https://github.com/nxtg-ai/SynApps-v0.4.0)
-
-A web-based visual platform for modular AI agents, enabling users to:
-
-- **Design Workflows Visually**: Drag-and-drop interface for creating AI workflows.
-- **Leverage Modular Agents**: Use pre-built agents like Writer, Memory, and Artist to perform tasks.
-- **Persist Data**: Store workflows and results for future reference.
-- **Collaborate in Real-Time**: WebSocket support for live updates and collaboration.
-
-*Note: SynApps is currently in Alpha. Contributions and feedback are welcome!*
+### [`3db`](https://github.com/nxtg-ai/3db)  
+**The Living, Breathing Database**  
+A unified, intelligent backend that combines:
+- PostgreSQL for structured memory  
+- pgvector for semantic understanding  
+- Apache AGE for graph intelligence  
+All synchronized in real time. AI-native. Developer-ready.
 
 ---
 
-## 🤝 Join Us
-
-We're looking for passionate individuals to join our mission:
-
-- **Contributors**: Developers, designers, and thinkers who want to shape the future of AI.
-- **Collaborators**: Organizations and individuals interested in integrating or building upon our tools.
-- **Visionaries**: Anyone with ideas on how to make AI more accessible and impactful.
+### [`SocialEntanglement`](https://github.com/nxtg-ai/socialentanglement) *(Coming Soon)*  
+**Your Autonomous Social Intelligence Agent**  
+Tracks trends, analyzes sentiment, and delivers GPT-powered market insights — across platforms, 24/7.
 
 ---
 
-## 📬 Contact
-
-- **Website**: [nxtg.ai](https://nxtg.ai)
-- **Email**: [axw@nxtg.ai](mailto:axw@nxtg.ai)
-- **GitHub**: [github.com/nxtg-ai](https://github.com/nxtg-ai)
+### [`SynApps`](https://github.com/nxtg-ai/SynApps-v0.4.0) *(v0.4.0 Alpha)*  
+**Visual Workflow Builder for Autonomous Agents**  
+Drag-and-drop orchestration for AI workflows using `react-flow`, `framer-motion`, and `FastAPI` orchestration. Build agent pipelines like you're sketching ideas.
 
 ---
 
-## 📄 License
-
-All our projects are open-source under the [MIT License](LICENSE), promoting collaboration and innovation.
+### [`ORACULUS`](https://github.com/nxtg-ai/oraculus) *(Under Development)*  
+**Your AI-Powered Project Management Assistant**  
+Context-aware retrieval, recursive summarization, and deep insight mining — optimized for transcriptions, meeting minutes generation, and long-form media recording.
 
 ---
 
-*Crafted with ❤️ by [axw](mailto:axw@nxtg.ai) @ [NxtG.ai](https://nxtg.ai)*
+## 🎯 Our Mission
+
+Build the **most powerful tools on Earth** for:
+- AI-native software engineering  
+- Autonomous agents  
+- Contextual memory systems  
+- Radical human empowerment through intelligence infrastructure
+
+> "We don't build products.  
+> We build **the future** of cognition."
+
+---
+
+## 🧑‍💻 Get Involved
+
+- 💬 Join our [Discord](https://discord.gg/UUt6Yfk7NX)  
+- 🛠️ Contribute to any open repo  
+- 📥 Submit ideas, issues, and PRs  
+- 🤝 Partner with us — [axw@nxtg.ai](mailto:axw@nxtg.ai)
+
+---
+
+## 📡 Stay Tuned
+
+- 🎙️ [NxtG.ai | AI Unveiled](https://open.spotify.com/show/0eGicvKYyd8mIxqywgyAbY?si=dCv-xNy7RPed3-JDFzVoiQ) — our podcast on the wild frontier of AI  
+- 📝 [Blog & Brainstorms](https://blog.nxtg.ai) — thoughts, experiments, breakthroughs  
+- 🧬 Coming soon: Launches, case studies, and community tools
+
+---
+
+## 🧬 Founder
+
+Built with obsession by [@AxW](https://www.linkedin.com/in/-asif-/) —  
+Father, Founder, Futurist, AI Architect.  
+*"Sometimes you build a database...  
+Sometimes you build a brain."*
+
+---
+
+## 🛰️ NxtG.ai — Unlocking the Next Generation of Thought
