@@ -1,4 +1,4 @@
-# <img src="logo.png" alt="NXTG.AI Logo" width="20"> NxtG.ai
+# <img src="logo.png" alt="NXTG.AI Logo" width="25"> NxtG.ai
 
 **Welcome to the future of human-AI synergy.**  
 At **NxtG.ai**, we build boundary-breaking tech that transforms how humans and machines think, act, and evolve — together.
