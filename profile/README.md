@@ -1,7 +1,7 @@
-# <img src="logo.png" alt="NXTG.AI Logo" width="25"> NxtG.ai
+# <img src="logo.png" alt="NXTG.AI Logo" width="25"> Next Gen AI
 
 **Welcome to the future of human-AI synergy.**  
-At **NxtG.ai**, we build boundary-breaking tech that transforms how humans and machines think, act, and evolve — together.
+At **Next Gen AI**, we build boundary-breaking tech that transforms how humans and machines think, act, and evolve — together.
 
 ---
 
@@ -74,4 +74,4 @@ Sometimes you build a brain."*
 
 ---
 
-## 🛰️ NxtG.ai — Unlocking the Next Generation of Thought
+## 🛰️ Next Gen AI — Unlocking the Next Generation of Thought
