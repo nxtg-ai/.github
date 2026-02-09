@@ -93,8 +93,8 @@
     </g>
 
     <!-- Title -->
-    <text x="45" y="20" font-family="'Segoe UI', system-ui, sans-serif" font-weight="700" font-size="16" fill="#e2e8f0">nxtg-forge</text>
-    <text x="45" y="36" font-family="'Segoe UI', system-ui, sans-serif" font-weight="400" font-size="10" fill="#6366f1" opacity="0.9">Claude Code Plugin</text>
+    <text x="45" y="20" font-family="'Segoe UI', system-ui, sans-serif" font-weight="700" font-size="16" fill="#e2e8f0">forge-ui</text>
+    <text x="45" y="36" font-family="'Segoe UI', system-ui, sans-serif" font-weight="400" font-size="10" fill="#6366f1" opacity="0.9">The Interface (React)</text>
 
     <!-- Description -->
     <text x="20" y="62" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#94a3b8">22 agents, 19 commands, governance</text>

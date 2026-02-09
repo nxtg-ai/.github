@@ -28,9 +28,9 @@ Three open-source projects. One mission: **make every developer 10x with AI orch
 <tr>
 <td width="33%" valign="top">
 
-### [`nxtg-forge`](https://github.com/nxtg-ai/nxtg-forge)
+### [`forge-ui`](https://github.com/nxtg-ai/forge-ui)
 
-**The Platform** -- Full-stack AI development environment with React dashboard, Infinity Terminal, governance HUD, and 22 specialized agents.
+**The Interface** -- React dashboard, Infinity Terminal, governance HUD, and 22 specialized AI agents. The visual layer for the Forge ecosystem.
 
 ```
 TypeScript | React | Express | xterm.js
@@ -78,7 +78,7 @@ Developer writes SPEC.md
         |
   forge-plugin              <-- 19 commands for governance, testing, deployment
         |
-  nxtg-forge                <-- Dashboard, terminal, real-time monitoring
+  forge-ui                  <-- Dashboard, terminal, real-time monitoring
 ```
 
 ---
@@ -124,7 +124,7 @@ Everything is MIT licensed. We believe the orchestration layer for AI developmen
 
 | Repo | Language | License | Status |
 |:-----|:---------|:--------|:-------|
-| [nxtg-forge](https://github.com/nxtg-ai/nxtg-forge) | TypeScript | MIT | Production |
+| [forge-ui](https://github.com/nxtg-ai/forge-ui) | TypeScript | MIT | Production |
 | [forge-orchestrator](https://github.com/nxtg-ai/forge-orchestrator) | Rust | MIT | v0.1.0 |
 | [forge-plugin](https://github.com/nxtg-ai/forge-plugin) | Markdown | MIT | Production |
 
