@@ -65,20 +65,20 @@ git clone → instant setup
 ### How They Fit Together
 
 ```
-Developer writes SPEC.md
-        |
-        v
-  forge-orchestrator        <-- Decomposes spec into tasks, assigns to AI tools
-        |
+   Developer writes SPEC.md
+             |
+             v
+     forge-orchestrator      <-- Decomposes spec into tasks, assigns to AI tools
+             |
    +---------+---------+
    |         |         |
  Claude    Codex    Gemini   <-- Each AI tool works on assigned tasks
    |         |         |
    +---------+---------+
-        |
-  forge-plugin              <-- 19 commands for governance, testing, deployment
-        |
-  forge-ui                  <-- Dashboard, terminal, real-time monitoring
+             |
+       forge-plugin          <-- 19 commands for governance, testing, deployment
+             |
+          orge-ui            <-- Dashboard, terminal, real-time monitoring
 ```
 
 ---
