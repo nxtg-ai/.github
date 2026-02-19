@@ -78,7 +78,7 @@ git clone → instant setup
              |
        forge-plugin          <-- 19 commands for governance, testing, deployment
              |
-          orge-ui            <-- Dashboard, terminal, real-time monitoring
+         forge-ui            <-- Dashboard, terminal, real-time monitoring
 ```
 
 ---
