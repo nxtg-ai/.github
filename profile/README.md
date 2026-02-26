@@ -1,151 +1,155 @@
 <div align="center">
 
-<img src="logo.png" alt="NXTG.AI" width="80">
+<img src="forge-logo.png" alt="Forge" width="100">
 
-# Next Gen AI
+# Forge
 
-**Building the infrastructure layer for AI-native development.**
+**From agents to teams.**
 
-We make AI coding tools work *together* — not in isolation.
+The program manager your AI agents are missing.
+
+[forge.nxtg.ai](https://forge.nxtg.ai)
 
 </div>
 
 ---
 
-## The Forge Ecosystem
+## The Problem
 
-Three open-source projects. One mission: **make every developer 10x with AI orchestration.**
+Multi-agent inside a single tool works fine. Claude Code runs 20 subagents and they stay aligned because the tool manages that coordination internally.
 
-<div align="center">
+The problem is multi-tool. Claude Code, Codex CLI, and Gemini CLI on the same repo with no shared state, no file locking, no knowledge capture. Each tool starts from scratch. Decisions evaporate between sessions. Two tools edit the same file and neither knows the other exists.
 
-<picture>
-  <img alt="The Forge Trio" src="forge-trio-banner.svg" width="100%">
-</picture>
+Forge solves this. One product, three levels.
 
-</div>
+---
+
+## One Product, Three Levels
 
 <table>
 <tr>
 <td width="33%" valign="top">
 
-### [`forge-ui`](https://github.com/nxtg-ai/forge-ui)
+### Level 1: [Forge Plugin](https://github.com/nxtg-ai/forge-plugin)
 
-**The Interface** -- React dashboard, Infinity Terminal, governance HUD, and 22 specialized AI agents. The visual layer for the Forge ecosystem.
+**Zero-dependency governance for Claude Code.**
 
+Install in 30 seconds. Health scoring, gap analysis, quality gates, and specialized agents.
+
+```bash
+claude plugin add nxtg-ai/forge-plugin
 ```
-TypeScript | React | Express | xterm.js
-```
+
+21 commands; 22 agents; 29 skills; 6 hooks; 8 MCP tools.
 
 </td>
 <td width="33%" valign="top">
 
-### [`forge-orchestrator`](https://github.com/nxtg-ai/forge-orchestrator)
+### Level 2: [Forge Orchestrator](https://github.com/nxtg-ai/forge-orchestrator)
 
-**The Brain** -- Rust binary that coordinates Claude Code, Codex CLI, and Gemini CLI as a unified team. 9 MCP tools, file locking, knowledge flywheel, drift detection.
+**Multi-tool coordination in a single Rust binary.**
 
+File locking, knowledge capture, task planning, drift detection. Coordinates Claude Code, Codex CLI, and Gemini CLI.
+
+```bash
+curl -fsSL https://forge.nxtg.ai/install.sh | sh
+forge init
 ```
-Rust | 3 MB | 51 tests | MCP server
-```
+
+4MB binary; 292 tests; 10 MCP tools.
 
 </td>
 <td width="33%" valign="top">
 
-### [`forge-plugin`](https://github.com/nxtg-ai/forge-plugin)
+### Level 3: [Forge Dashboard](https://github.com/nxtg-ai/forge-ui)
 
-**The Distribution** -- Drop-in Claude Code plugin. `git clone` and you're running. 19 slash commands, 22 agents, zero npm dependencies.
+**Full visual platform for multi-tool AI coordination.**
 
+Real-time governance HUD, agent activity feed, and the Infinity Terminal: sessions that survive browser close, network drops, and device switches.
+
+```bash
+git clone https://github.com/nxtg-ai/forge-ui
+npm install && npm run dev
 ```
-git clone → instant setup
-```
+
+58 components; 4,146 tests; 87% coverage.
 
 </td>
 </tr>
 </table>
 
-### How They Fit Together
+---
+
+## How It Works
 
 ```
-   Developer writes SPEC.md
-             |
-             v
-     forge-orchestrator      <-- Decomposes spec into tasks, assigns to AI tools
-             |
-   +---------+---------+
-   |         |         |
- Claude    Codex    Gemini   <-- Each AI tool works on assigned tasks
-   |         |         |
-   +---------+---------+
-             |
-       forge-plugin          <-- 19 commands for governance, testing, deployment
-             |
-         forge-ui            <-- Dashboard, terminal, real-time monitoring
+  forge-orchestrator (Rust, 4MB)
+  Policy core. File locking. Knowledge flywheel.
+  Governance. MCP server. Multi-tool adapters.
+
+  Policy enforced here. Nowhere else.
+         |                    |
+    forge-plugin          forge-ui
+    (Level 1)             (Level 3)
+    Claude Code           React dashboard
+    21 commands           Infinity Terminal
+    22 agents             Governance HUD
+    29 skills             Agent feed
 ```
+
+Communication: `.forge/` filesystem + MCP stdio. No daemon. No database. State is files.
 
 ---
 
-## Why This Exists
+## Why Forge Exists
 
-AI coding tools are powerful alone. But real projects need **coordination**:
+Every developer running multiple AI tools on the same repo hits the same walls.
 
-- **File locking** -- Two AI agents editing the same file = merge hell. Forge prevents it.
-- **Knowledge capture** -- Decisions, learnings, patterns -- automatically classified and searchable.
-- **Drift detection** -- Your spec says "build auth" but the AI is refactoring CSS? Caught instantly.
-- **Governance** -- Health scores, doc coverage, architecture compliance. Continuously validated.
+**File locking.** Two tools editing the same file at the same time. No locks. No coordination. Forge acquires exclusive locks per file; queued tools get notified.
 
-**We don't build another AI coding tool. We make the ones you already have work together.**
+**Knowledge capture.** Decisions, patterns, learnings captured automatically. Auto-classified and searchable. A Claude Code session's decisions are available to Codex CLI the next day.
+
+**Drift detection.** Your spec says "build auth" but the tool is refactoring CSS. Forge catches divergence early.
+
+**Governance.** Health scores from A through F, computed across 8 quality dimensions. Continuously validated, not just at PR time.
+
+These are the same failure modes that break billion-dollar enterprise programs. The founder spent 23 years solving them with human teams. Forge encodes those patterns for AI tools.
 
 ---
 
 ## Quick Start
 
-The fastest path from zero to orchestrated AI development:
-
 ```bash
-# 1. Install the Claude Code plugin (30 seconds)
-cd your-project
-git clone https://github.com/nxtg-ai/forge-plugin.git .claude-forge
+# Level 1: Governance in 30 seconds
+claude plugin add nxtg-ai/forge-plugin
 
-# 2. Install the orchestrator (optional, for multi-AI coordination)
-cargo install --git https://github.com/nxtg-ai/forge-orchestrator
-
-# 3. Initialize
+# Level 2: Multi-tool coordination
+curl -fsSL https://forge.nxtg.ai/install.sh | sh
 forge init
-forge plan --generate   # AI decomposes your spec into tasks
 
-# 4. Ship
-forge run --task T-001 --agent claude
+# Level 3: Visual dashboard
+git clone https://github.com/nxtg-ai/forge-ui
+npm install && npm run dev
 ```
+
+Each level builds on the last. Nothing forces you to upgrade. Adoption follows the pain.
 
 ---
 
 ## Open Source
 
-Everything is MIT licensed. We believe the orchestration layer for AI development should be open infrastructure -- like Git, like Docker, like Kubernetes.
-
-| Repo | Language | License | Status |
-|:-----|:---------|:--------|:-------|
-| [forge-ui](https://github.com/nxtg-ai/forge-ui) | TypeScript | MIT | Production |
-| [forge-orchestrator](https://github.com/nxtg-ai/forge-orchestrator) | Rust | MIT | v0.1.0 |
-| [forge-plugin](https://github.com/nxtg-ai/forge-plugin) | Markdown | MIT | Production |
-
----
-
-## Get Involved
-
-We're building in the open and contributions are welcome.
-
-- **Star the repos** -- It helps more than you think
-- **Try it** -- `git clone` the plugin and use it for a day
-- **Contribute** -- Check the "good first issues" in [forge-orchestrator](https://github.com/nxtg-ai/forge-orchestrator)
-- **Ideas & feedback** -- [Open an issue](https://github.com/nxtg-ai/forge-orchestrator/issues) or reach out
-- **Partner** -- [axw@nxtg.ai](mailto:axw@nxtg.ai)
+| Repo | Level | Language | Tests |
+|:-----|:------|:---------|:------|
+| [forge-plugin](https://github.com/nxtg-ai/forge-plugin) | 1: Governance | Markdown + Shell | Structure validation |
+| [forge-orchestrator](https://github.com/nxtg-ai/forge-orchestrator) | 2: Coordination | Rust | 292 |
+| [forge-ui](https://github.com/nxtg-ai/forge-ui) | 3: Dashboard | TypeScript + React | 4,146 |
 
 ---
 
 <div align="center">
 
-**[nxtg.ai](https://nxtg.ai)** | Built by [@AxW](https://www.linkedin.com/in/-asif-/)
+**[forge.nxtg.ai](https://forge.nxtg.ai)** | **[nxtg.ai](https://nxtg.ai)** | Built by [@AxW](https://www.linkedin.com/in/-asif-/)
 
-*"The best AI tools deserve a tech lead. We built one."*
+*"The program manager your AI agents are missing."*
 
 </div>
