@@ -4,9 +4,9 @@
 
 # Forge
 
-**From agents to teams.**
+**From prototype to production.**
 
-The program manager your AI agents are missing.
+The delivery engine your AI tools are missing.
 
 [forge.nxtg.ai](https://forge.nxtg.ai)
 
@@ -20,17 +20,17 @@ Multi-agent inside a single tool works fine. Claude Code runs 20 subagents and t
 
 The problem is multi-tool. Claude Code, Codex CLI, and Gemini CLI on the same repo with no shared state, no file locking, no knowledge capture. Each tool starts from scratch. Decisions evaporate between sessions. Two tools edit the same file and neither knows the other exists.
 
-Forge solves this. One product, three levels.
+Forge solves this. One product, three depths.
 
 ---
 
-## One Product, Three Levels
+## One Product, Three Depths
 
 <table>
 <tr>
 <td width="33%" valign="top">
 
-### Level 1: [Forge Plugin](https://github.com/nxtg-ai/forge-plugin)
+### L1 — The Safety Net: [Forge Plugin](https://github.com/nxtg-ai/forge-plugin)
 
 **Zero-dependency governance for Claude Code.**
 
@@ -45,7 +45,7 @@ claude plugin add nxtg-ai/forge-plugin
 </td>
 <td width="33%" valign="top">
 
-### Level 2: [Forge Orchestrator](https://github.com/nxtg-ai/forge-orchestrator)
+### L2 — The Delivery Engine: [Forge Orchestrator](https://github.com/nxtg-ai/forge-orchestrator)
 
 **Multi-tool coordination in a single Rust binary.**
 
@@ -61,7 +61,7 @@ forge init
 </td>
 <td width="33%" valign="top">
 
-### Level 3: [Forge Dashboard](https://github.com/nxtg-ai/forge-ui)
+### L3 — Mission Control: [Forge Dashboard](https://github.com/nxtg-ai/forge-ui)
 
 **Full visual platform for multi-tool AI coordination.**
 
@@ -90,7 +90,7 @@ npm install && npm run dev
   Policy enforced here. Nowhere else.
          |                    |
     forge-plugin          forge-ui
-    (Level 1)             (Level 3)
+    (L1: Safety Net)      (L3: Mission Control)
     Claude Code           React dashboard
     21 commands           Infinity Terminal
     22 agents             Governance HUD
@@ -120,19 +120,19 @@ These are the same failure modes that break billion-dollar enterprise programs. 
 ## Quick Start
 
 ```bash
-# Level 1: Governance in 30 seconds
+# L1: Governance in 30 seconds
 claude plugin add nxtg-ai/forge-plugin
 
-# Level 2: Multi-tool coordination
+# L2: Multi-tool coordination
 curl -fsSL https://forge.nxtg.ai/install.sh | sh
 forge init
 
-# Level 3: Visual dashboard
+# L3: Visual dashboard
 git clone https://github.com/nxtg-ai/forge-ui
 npm install && npm run dev
 ```
 
-Each level builds on the last. Nothing forces you to upgrade. Adoption follows the pain.
+Each depth builds on the last. Nothing forces you to go deeper. Adoption follows the pain.
 
 ---
 
@@ -140,9 +140,9 @@ Each level builds on the last. Nothing forces you to upgrade. Adoption follows t
 
 | Repo | Level | Language | Tests |
 |:-----|:------|:---------|:------|
-| [forge-plugin](https://github.com/nxtg-ai/forge-plugin) | 1: Governance | Markdown + Shell | Structure validation |
-| [forge-orchestrator](https://github.com/nxtg-ai/forge-orchestrator) | 2: Coordination | Rust | 292 |
-| [forge-ui](https://github.com/nxtg-ai/forge-ui) | 3: Dashboard | TypeScript + React | 4,146 |
+| [forge-plugin](https://github.com/nxtg-ai/forge-plugin) | L1: The Safety Net | Markdown + Shell | Structure validation |
+| [forge-orchestrator](https://github.com/nxtg-ai/forge-orchestrator) | L2: The Delivery Engine | Rust | 292 |
+| [forge-ui](https://github.com/nxtg-ai/forge-ui) | L3: Mission Control | TypeScript + React | 4,146 |
 
 ---
 
@@ -150,6 +150,6 @@ Each level builds on the last. Nothing forces you to upgrade. Adoption follows t
 
 **[forge.nxtg.ai](https://forge.nxtg.ai)** | **[nxtg.ai](https://nxtg.ai)** | Built by [@AxW](https://www.linkedin.com/in/-asif-/)
 
-*"The program manager your AI agents are missing."*
+*"The delivery engine your AI tools are missing."*
 
 </div>
