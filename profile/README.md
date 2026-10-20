@@ -1,155 +1,26 @@
-<div align="center">
+# NXTG.AI
 
-<img src="forge-logo.png" alt="Forge" width="100">
+**NXTG.AI helps enterprises put AI agents into production they can trust.**
 
-# Forge
+Reliability-First Agent Deployment: in 4 weeks we ship one production AI workflow with evaluation gates, traces and policy controls. To start a conversation, email engage@nxtg.ai.
 
-**From prototype to production.**
+## Built on
 
-The delivery engine your AI tools are missing.
+- **Dx3**: my own platform, persistent memory and governance for AI agents. NXTG.AI runs on it. It is not offered outside NXTG.AI yet; the research behind it is public at [nxtg.ai/research](https://nxtg.ai/research).
+- **Faultline**: checks AI claims against sources across providers. Try it free at [faultline.nxtg.ai](https://faultline.nxtg.ai), or install the CLI: `npm i -g @nxtg/faultline` ([faultline-pro](https://github.com/nxtg-ai/faultline-pro), Apache-2.0).
 
-[forge.nxtg.ai](https://forge.nxtg.ai)
+## Proof you can check
 
-</div>
+- [Faultline CLI](https://www.npmjs.com/package/@nxtg/faultline), open source under Apache-2.0.
+- [The Jev calibration test](https://nxtg.ai/insights/jev-calibration-test), pre-registered and run in public on 2026-10-01 ([code](https://github.com/nxtg-ai/jev-calibration-eval)). Cited independently by [Concretio](https://www.concret.io/blog/jev-vs-llms-ai-decision-model).
+- [The Honor System](https://nxtg.ai/series/ai-unveiled-the-honor-system), a podcast series on AI governance.
+- [Field notes](https://nxtg.ai/insights) at nxtg.ai/insights.
 
----
+## Also from the lab
 
-## The Problem
+- **Forge** ([forge.nxtg.ai](https://forge.nxtg.ai)): governance and coordination for AI coding tools. Alpha.
+  - [forge-plugin](https://github.com/nxtg-ai/forge-plugin): MIT.
+  - [forge-orchestrator](https://github.com/nxtg-ai/forge-orchestrator) and [forge-ui](https://github.com/nxtg-ai/forge-ui): source-available under FSL-1.1-ALv2; each release converts to Apache-2.0 two years after it ships.
+- Everything else lives at [nxtg.ai/labs](https://nxtg.ai/labs).
 
-Multi-agent inside a single tool works fine. Claude Code runs 20 subagents and they stay aligned because the tool manages that coordination internally.
-
-The problem is multi-tool. Claude Code, Codex CLI, and Gemini CLI on the same repo with no shared state, no file locking, no knowledge capture. Each tool starts from scratch. Decisions evaporate between sessions. Two tools edit the same file and neither knows the other exists.
-
-Forge solves this. One product, three depths.
-
----
-
-## One Product, Three Depths
-
-<table>
-<tr>
-<td width="33%" valign="top">
-
-### L1 — The Safety Net: [Forge Plugin](https://github.com/nxtg-ai/forge-plugin)
-
-**Zero-dependency governance for Claude Code.**
-
-Install in 30 seconds. Health scoring, gap analysis, quality gates, and specialized agents.
-
-```bash
-claude plugin add nxtg-ai/forge-plugin
-```
-
-21 commands; 22 agents; 29 skills; 6 hooks; 8 MCP tools.
-
-</td>
-<td width="33%" valign="top">
-
-### L2 — The Delivery Engine: [Forge Orchestrator](https://github.com/nxtg-ai/forge-orchestrator)
-
-**Multi-tool coordination in a single Rust binary.**
-
-File locking, knowledge capture, task planning, drift detection. Coordinates Claude Code, Codex CLI, and Gemini CLI.
-
-```bash
-curl -fsSL https://forge.nxtg.ai/install.sh | sh
-forge init
-```
-
-4MB binary; 292 tests; 10 MCP tools.
-
-</td>
-<td width="33%" valign="top">
-
-### L3 — Mission Control: [Forge Dashboard](https://github.com/nxtg-ai/forge-ui)
-
-**Full visual platform for multi-tool AI coordination.**
-
-Real-time governance HUD, agent activity feed, and the Infinity Terminal: sessions that survive browser close, network drops, and device switches.
-
-```bash
-git clone https://github.com/nxtg-ai/forge-ui
-npm install && npm run dev
-```
-
-58 components; 4,146 tests; 87% coverage.
-
-</td>
-</tr>
-</table>
-
----
-
-## How It Works
-
-```
-  forge-orchestrator (Rust, 4MB)
-  Policy core. File locking. Knowledge flywheel.
-  Governance. MCP server. Multi-tool adapters.
-
-  Policy enforced here. Nowhere else.
-         |                    |
-    forge-plugin          forge-ui
-    (L1: Safety Net)      (L3: Mission Control)
-    Claude Code           React dashboard
-    21 commands           Infinity Terminal
-    22 agents             Governance HUD
-    29 skills             Agent feed
-```
-
-Communication: `.forge/` filesystem + MCP stdio. No daemon. No database. State is files.
-
----
-
-## Why Forge Exists
-
-Every developer running multiple AI tools on the same repo hits the same walls.
-
-**File locking.** Two tools editing the same file at the same time. No locks. No coordination. Forge acquires exclusive locks per file; queued tools get notified.
-
-**Knowledge capture.** Decisions, patterns, learnings captured automatically. Auto-classified and searchable. A Claude Code session's decisions are available to Codex CLI the next day.
-
-**Drift detection.** Your spec says "build auth" but the tool is refactoring CSS. Forge catches divergence early.
-
-**Governance.** Health scores from A through F, computed across 8 quality dimensions. Continuously validated, not just at PR time.
-
-These are the same failure modes that break billion-dollar enterprise programs. The founder spent 23 years solving them with human teams. Forge encodes those patterns for AI tools.
-
----
-
-## Quick Start
-
-```bash
-# L1: Governance in 30 seconds
-claude plugin add nxtg-ai/forge-plugin
-
-# L2: Multi-tool coordination
-curl -fsSL https://forge.nxtg.ai/install.sh | sh
-forge init
-
-# L3: Visual dashboard
-git clone https://github.com/nxtg-ai/forge-ui
-npm install && npm run dev
-```
-
-Each depth builds on the last. Nothing forces you to go deeper. Adoption follows the pain.
-
----
-
-## Open Source
-
-| Repo | Level | Language | Tests |
-|:-----|:------|:---------|:------|
-| [forge-plugin](https://github.com/nxtg-ai/forge-plugin) | L1: The Safety Net | Markdown + Shell | Structure validation |
-| [forge-orchestrator](https://github.com/nxtg-ai/forge-orchestrator) | L2: The Delivery Engine | Rust | 292 |
-| [forge-ui](https://github.com/nxtg-ai/forge-ui) | L3: Mission Control | TypeScript + React | 4,146 |
-
----
-
-<div align="center">
-
-**[forge.nxtg.ai](https://forge.nxtg.ai)** | **[nxtg.ai](https://nxtg.ai)** | Built by [@AxW](https://www.linkedin.com/in/-asif-/)
-
-*"The delivery engine your AI tools are missing."*
-
-</div>
+Asif Waliuddin, founder of NXTG.AI, 23+ years leading global digital transformation programs.
