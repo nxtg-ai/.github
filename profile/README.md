@@ -1,6 +1,6 @@
-# NXTG.AI
+# NXTG.ai
 
-**NXTG.AI builds products that check AI's work before you rely on it.**
+**NXTG.ai builds products that check AI's work before you rely on it.**
 
 ## Faultline
 
@@ -33,4 +33,4 @@ Dx3: the memory and governance layer we run our own agent fleet on. In use inter
 - [The Jev calibration test](https://github.com/nxtg-ai/jev-calibration-eval), pre-registered and run in public on 2026-10-01.
 - Everything else lives at [nxtg.ai/labs](https://nxtg.ai/labs).
 
-Asif Waliuddin, founder of NXTG.AI, 23+ years leading global digital transformation programs.
+Asif Waliuddin, founder of NXTG.ai, 23+ years leading global digital transformation programs.
