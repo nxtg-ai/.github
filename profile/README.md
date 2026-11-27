@@ -27,7 +27,7 @@ Dx3: the memory and governance layer we run our own agent fleet on. In use inter
 
 - **Forge** ([forge.nxtg.ai](https://forge.nxtg.ai)): governance and coordination for AI coding tools. Alpha.
   - [forge-plugin](https://github.com/nxtg-ai/forge-plugin): MIT.
-  - [forge-orchestrator](https://github.com/nxtg-ai/forge-orchestrator) and [forge-ui](https://github.com/nxtg-ai/forge-ui): source-available under FSL-1.1-ALv2; each release converts to Apache-2.0 two years after it ships.
+  - [forge-orchestrator](https://github.com/nxtg-ai/forge-orchestrator) and [forge-ui](https://github.com/nxtg-ai/forge-ui): Apache-2.0.
 - [The Jev calibration test](https://github.com/nxtg-ai/jev-calibration-eval), pre-registered and run in public on 2026-10-01.
 - Everything else lives at [nxtg.ai/labs](https://nxtg.ai/labs).
 
